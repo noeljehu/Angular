@@ -1,0 +1,46 @@
+/* Estilos generales para la sección de inicio de sesión */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  color: #007bff;
+  font-weight: 700;
+}
+
+.login-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.login-form .form-control {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.login-form .btn-primary {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.login-form .btn-secondary {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.login-form .btn-primary:hover {
+  background-color: #0069d9;
+}
+
+.login-form .btn-secondary:hover {
+  background-color: #6c757d;
+}
+
+.login-form .alert {
+  font-size: 0.9rem;
+}

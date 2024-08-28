@@ -1,0 +1,44 @@
+/* Estilos generales para la sección de crear cuenta */
+.crear-cuenta {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.crear-cuenta h1 {
+  color: #007bff;
+  font-weight: 700;
+}
+
+.crear-cuenta .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.crear-cuenta .form-control {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.crear-cuenta .btn-primary {
+  width: 45%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.crear-cuenta .btn-secondary {
+  width: 45%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.crear-cuenta .btn-primary:hover {
+  background-color: #0069d9;
+}
+
+.crear-cuenta .btn-secondary:hover {
+  background-color: #6c757d;
+}

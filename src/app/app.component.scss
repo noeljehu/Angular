@@ -1,0 +1,26 @@
+/* Estilos globales para el botón de cierre de sesión */
+.logout-button {
+    position: fixed; /* Fija el botón en la pantalla */
+    top: 20px; /* Espaciado desde el borde superior */
+    right: 20px; /* Espaciado desde el borde derecho */
+    background-color: #d9534f; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Muestra el cursor como una mano */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+  }
+  
+  .logout-button:hover {
+    background-color: #c9302c; /* Color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+  }
+  
+  .logout-button:active {
+    background-color: #ac2925; /* Color de fondo al hacer clic */
+    transform: scale(0.98); /* Efecto de contracción al hacer clic */
+  }
+  

@@ -1,0 +1,100 @@
+/* Contenedor principal del formulario */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los campos de entrada */
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+}
+
+/* Estilos para el botón de envío */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para mensajes de error y éxito */
+.swal2-popup {
+  font-size: 16px;
+  padding: 20px;
+}
+
+.swal2-title {
+  font-weight: bold;
+}
+
+.swal2-content {
+  margin: 10px 0;
+}
+/* Animación de desvanecimiento para mensajes de error */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar la animación al mensaje de error */
+.invalid-feedback {
+  color: #dc3545; /* Color rojo para mensajes de error */
+  font-size: 0.875em; /* Tamaño de fuente más pequeño para los mensajes */
+  display: block; /* Asegúrate de que el mensaje se muestre como bloque */
+  animation: fadeIn 0.3s ease-out; /* Animación de desvanecimiento */
+  margin-top: 5px; /* Espacio superior para separar el mensaje del campo de entrada */
+}
+
+/* Animación de borde rojo para campos inválidos */
+@keyframes borderError {
+  from {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  to {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.is-invalid {
+  border-color: #dc3545; /* Borde rojo para campos inválidos */
+  animation: borderError 0.3s ease-out; /* Animación de borde */
+}
+

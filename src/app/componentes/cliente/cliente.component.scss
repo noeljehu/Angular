@@ -1,0 +1,90 @@
+/* General Card Styling */
+.perfil-banco .card {
+  border-radius: 15px;
+  background-color: #ffffff;
+  border: none;
+  padding: 1rem;
+}
+
+/* Heading Styling */
+.perfil-banco h2 {
+  color: #007bff;
+  font-weight: 700;
+}
+
+/* Personal Information Styling */
+.perfil-banco .info-personal p {
+  font-size: 1rem;
+  color: #495057;
+}
+
+/* Account List Styling */
+.cuenta-item {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.cuenta-info {
+  font-size: 0.9rem;
+  color: #343a40;
+}
+
+/* Transfer List Styling */
+.transferencia-item {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.transferencia-info {
+  font-size: 0.8rem;
+  color: #495057;
+}
+
+/* Button Styling */
+.btn-primary {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btn-success, .btn-danger {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Logout Button Positioning */
+.btn-danger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Pagination Styling */
+.paginacion button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.paginacion button {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 0.85rem;
+}
+
+.paginacion button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* No Session Styling */
+.no-sesion p {
+  font-size: 1rem;
+  color: #dc3545;
+  font-weight: bold;
+}

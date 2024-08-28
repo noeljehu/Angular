@@ -1,0 +1,53 @@
+<div class="container mt-5 perfil-banco">
+  <div class="card shadow p-4">
+    <div *ngIf="cliente">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary">Bienvenido, {{ cliente.nombre }}</h2>
+        <button class="btn btn-danger" (click)="onLogout()">Cerrar Sesión</button>
+      </div>
+
+      <div class="row">
+        <!-- Sección de Cuentas -->
+        <div class="col-md-6 mb-3">
+          <h4 class="text-secondary">Mis Cuentas</h4>
+          <ul class="list-group">
+            <li *ngFor="let cuenta of cliente.cuentas" class="list-group-item d-flex justify-content-between align-items-center cuenta-item">
+              <div class="cuenta-info">
+                <span>{{ cuenta.numeroCuenta }} - {{ cuenta.saldo | currency }}</span>
+              </div>
+              <button class="btn btn-primary btn-sm" (click)="iniciarTransferencia(cuenta.numeroCuenta!)">Transferir</button>
+            </li>
+          </ul>
+          <div class="text-center mt-3">
+            <button class="btn btn-success" (click)="crearCuenta()">Nueva Cuenta</button>
+          </div>
+        </div>
+
+        <!-- Sección de Transferencias -->
+        <div class="col-md-6 mb-3">
+          <h4 class="text-secondary">Transferencias Recientes</h4>
+          <ul class="list-group">
+            <li *ngFor="let transferencia of transferenciasPaginadas" class="list-group-item transferencia-item">
+              <div class="transferencia-info">
+                <span>{{ transferencia.fechaTransferencia | date }} - {{ transferencia.monto | currency }}</span><br>
+                <small>{{ transferencia.numeroCuentaOrigen }} a {{ transferencia.numeroCuentaDestino }}</small>
+              </div>
+            </li>
+          </ul>
+          <div class="paginacion text-center mt-3">
+            <button *ngFor="let pagina of [].constructor(totalPaginas); let i = index"
+                    [class.active]="paginaActual === i + 1"
+                    class="btn btn-sm btn-light me-1"
+                    (click)="cambiarPagina(i + 1)">
+              {{ i + 1 }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no-sesion text-center" *ngIf="!cliente">
+      <p>No has iniciado sesión.</p>
+    </div>
+  </div>
+</div>
